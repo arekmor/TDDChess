@@ -20,7 +20,7 @@ namespace TDDChess.Tests
             //arrange
             
             //act
-            Target.AddPiece(new Pawn(), 2, 1);
+            Target.AddPiece(new Pawn(), new BoardCoordinates(2, 1));
             //assert
         }
         [Test]
@@ -29,9 +29,9 @@ namespace TDDChess.Tests
             //arrange
 
             //act
-            Target.AddPiece(Piece, 1, 1);
+            Target.AddPiece(Piece, new BoardCoordinates(1, 1));
             //assert
-            Assert.AreEqual(Piece, Target.GetPiece(1, 1));
+            Assert.AreEqual(Piece, Target.GetPiece(new BoardCoordinates(1, 1)));
         }
     }
 }

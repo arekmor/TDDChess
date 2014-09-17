@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 using NUnit.Framework;
 
 namespace TDDChess.Tests
@@ -7,15 +7,14 @@ namespace TDDChess.Tests
     class PawnTests
     {
         [Test]
-        public void GetMovesFrom_PawnAt2_2_PawnAt2_3()
+        public void GetMovesFrom_PawnAt2_2_OneResultPawnAt2_3()
         {
             //arrange
             var pawn = new Pawn();
             //act
-            Tuple<int, int> possibleMoves = pawn.GetMovesFrom(2, 2);
-            //assert
-            Assert.AreEqual(2, possibleMoves.Item1);
-            Assert.AreEqual(3, possibleMoves.Item2);
+            var possibleMoves = pawn.GetMovesFrom(new BoardCoordinates(2, 2));
+            //assert                     
+            Assert.IsTrue(possibleMoves.Any(bc => bc.X == 2 && bc.Y == 3));
         }
     }
 }
