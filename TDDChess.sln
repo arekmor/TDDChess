@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDChess", "TDDChess\TDDChess.csproj", "{405385BB-3F26-46DE-84B8-0A5493EF9007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDChess.Tests", "TDDChess.Tests\TDDChess.Tests.csproj", "{97E8ADC1-0EEB-48B2-8CFF-C2AD12F9DDCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{405385BB-3F26-46DE-84B8-0A5493EF9007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{405385BB-3F26-46DE-84B8-0A5493EF9007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{405385BB-3F26-46DE-84B8-0A5493EF9007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{405385BB-3F26-46DE-84B8-0A5493EF9007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97E8ADC1-0EEB-48B2-8CFF-C2AD12F9DDCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97E8ADC1-0EEB-48B2-8CFF-C2AD12F9DDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97E8ADC1-0EEB-48B2-8CFF-C2AD12F9DDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97E8ADC1-0EEB-48B2-8CFF-C2AD12F9DDCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
