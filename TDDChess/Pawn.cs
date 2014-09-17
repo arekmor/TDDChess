@@ -4,9 +4,9 @@ namespace TDDChess
 {
     public class Pawn
     {
-        public IEnumerable<BoardCoordinates> GetMovesFrom(BoardCoordinates coordinates)
+        public IEnumerable<BoardCoordinate> GetMovesFrom(BoardCoordinate coordinates)
         {
-            yield return new BoardCoordinates(coordinates.X, coordinates.Y + 1);
+            yield return new BoardCoordinate(coordinates.X, coordinates.Y + 1);
         }
     }
 }
