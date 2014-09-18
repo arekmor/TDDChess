@@ -2,14 +2,14 @@
 {
     public class BoardCoordinate
     {
-        private int _x;
+        private readonly int _x;
 
         public int X
         {
             get { return _x; }        
         }
 
-        private int _y;
+        private readonly int _y;
 
         public int Y
         {

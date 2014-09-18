@@ -44,6 +44,7 @@
     <Compile Include="BoardTests.cs" />
     <Compile Include="PawnTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RookTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TDDChess\TDDChess.csproj">

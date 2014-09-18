@@ -5,14 +5,12 @@ namespace TDDChess.Tests
 {
     [TestFixture]
     public class BoardTests
-    {
-        private Pawn Piece { get; set; }
+    {        
         public Board Target { get; set; }
 
         [SetUp]
         public void SetUp()
-        {
-            Piece = new Pawn();
+        {            
             Target = new Board();
         }
         [Test]
@@ -22,6 +20,15 @@ namespace TDDChess.Tests
             
             //act
             Target.AddPiece(new Pawn(), new BoardCoordinate(2, 1));
+            //assert
+        }
+        [Test]
+        public void AddPiece_RookAsParameter_NotThrowingException()
+        {
+            //arrange
+
+            //act
+            Target.AddPiece(new Rook(), new BoardCoordinate(2, 1));
             //assert
         }
         [Test]
@@ -68,11 +75,11 @@ namespace TDDChess.Tests
         public void GetPiece_AddingPieceToUnoccupiedSquare_ReturningAddedPiece()
         {
             //arrange
-
+            Piece pawn = new Pawn();                        
             //act
-            Target.AddPiece(Piece, new BoardCoordinate(1, 1));
+            Target.AddPiece(pawn, new BoardCoordinate(1, 1));
             //assert
-            Assert.AreEqual(Piece, Target.GetPiece(new BoardCoordinate(1, 1)));
+            Assert.AreEqual(pawn, Target.GetPiece(new BoardCoordinate(1, 1)));
         }
     }
 }

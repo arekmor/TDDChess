@@ -2,11 +2,15 @@
 
 namespace TDDChess
 {
-    public class Pawn
+    public class Pawn : Piece
     {
-        public IEnumerable<BoardCoordinate> GetMovesFrom(BoardCoordinate coordinates)
+        public bool HasMoved { get; set; }
+        public override IEnumerable<BoardCoordinate> GetMovesFrom(BoardCoordinate coordinates)
         {
             yield return new BoardCoordinate(coordinates.X, coordinates.Y + 1);
+            if (!HasMoved)
+                yield return new BoardCoordinate(coordinates.X, coordinates.Y + 2);
         }
+        
     }
 }
