@@ -12,7 +12,7 @@ namespace TDDChess.Tests
             //arrange
             var pawn = new Pawn();
             //act
-            var possibleMoves = pawn.GetMovesFrom(new BoardCoordinate(2, 2));
+            var possibleMoves = pawn.GetMovesFrom(new BoardCoordinate(2, 2), 8);
             //assert                     
             Assert.IsTrue(possibleMoves.Any(bc => bc.X == 2 && bc.Y == 3));
         }
@@ -22,7 +22,7 @@ namespace TDDChess.Tests
             //arrange
             var pawn = new Pawn {HasMoved = false};
             //act
-            var possibleMoves = pawn.GetMovesFrom(new BoardCoordinate(2, 2));
+            var possibleMoves = pawn.GetMovesFrom(new BoardCoordinate(2, 2), 8);
             //assert                     
             Assert.IsTrue(possibleMoves.Any(bc => bc.X == 2 && bc.Y == 4));
         }
@@ -32,7 +32,7 @@ namespace TDDChess.Tests
             //arrange
             var pawn = new Pawn {HasMoved = true};
             //act
-            var possibleMoves = pawn.GetMovesFrom(new BoardCoordinate(2, 2));
+            var possibleMoves = pawn.GetMovesFrom(new BoardCoordinate(2, 2), 8);
             //assert                     
             Assert.IsFalse(possibleMoves.Any(bc => bc.X == 2 && bc.Y == 4));
         }

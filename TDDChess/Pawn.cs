@@ -5,7 +5,7 @@ namespace TDDChess
     public class Pawn : Piece
     {
         public bool HasMoved { get; set; }
-        public override IEnumerable<BoardCoordinate> GetMovesFrom(BoardCoordinate coordinates)
+        public override IEnumerable<BoardCoordinate> GetMovesFrom(BoardCoordinate coordinates, int boardSize)
         {
             yield return new BoardCoordinate(coordinates.X, coordinates.Y + 1);
             if (!HasMoved)

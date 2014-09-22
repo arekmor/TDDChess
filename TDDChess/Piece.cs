@@ -4,6 +4,6 @@ namespace TDDChess
 {
     public abstract class Piece
     {
-        public abstract IEnumerable<BoardCoordinate> GetMovesFrom(BoardCoordinate coordinates);
+        public abstract IEnumerable<BoardCoordinate> GetMovesFrom(BoardCoordinate coordinates, int boardSize);
     }
 }
