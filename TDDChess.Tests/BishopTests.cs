@@ -63,5 +63,25 @@ namespace TDDChess.Tests
             //assert
             Assert.IsFalse(moves.Any(x => x.X <= 0 || x.Y <= 0));
         }
+        [Test]
+        public void GetMovesForm_Coordinate_1_1_Returns_8_8()
+        {
+            //arrange
+
+            //act
+            var moves = Target.GetMovesFrom(new BoardCoordinate(1, 1), DefaultBoardSize);
+            //assert
+            Assert.IsTrue(moves.Any(x => x.X == 8 && x.Y == 8));
+        }
+        [Test]
+        public void GetMovesForm_Coordinate_8_8_Returns_1_1()
+        {
+            //arrange
+
+            //act
+            var moves = Target.GetMovesFrom(new BoardCoordinate(8, 8), DefaultBoardSize);
+            //assert
+            Assert.IsTrue(moves.Any(x => x.X == 1 && x.Y == 1));
+        }
     }
 }
