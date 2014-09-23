@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace TDDChess
 {
@@ -6,13 +7,10 @@ namespace TDDChess
     {
         public override IEnumerable<BoardCoordinate> GetMovesFrom(BoardCoordinate coordinates, int boardSize)
         {
-            for (int i = 1; i <= boardSize; i++)
-            {
-                if (i != coordinates.Y)
-                    yield return new BoardCoordinate(coordinates.X, i);
-                if (i != coordinates.X)
-                    yield return new BoardCoordinate(i, coordinates.Y);
-            }
+            var allCoordinates = Enumerable.Range(1, boardSize).ToList();
+            var verticalCoordinates = allCoordinates.Where(y => y != coordinates.Y).Select(y => new BoardCoordinate(coordinates.X, y));
+            var horizontalCoordinates = allCoordinates.Where(x => x != coordinates.X).Select(x => new BoardCoordinate(x, coordinates.X));
+            return verticalCoordinates.Union(horizontalCoordinates);
         }
     }
 }

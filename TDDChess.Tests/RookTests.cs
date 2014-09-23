@@ -42,5 +42,14 @@ namespace TDDChess.Tests
             //assert
             Assert.AreEqual(0, moves.Count(x => x.X == 0 || x.Y == 0));
         }
+        [Test]
+        public void GetMovesFrom_Coordinate_2_3_Contains_2_6()
+        {
+            //arrange            
+            //act
+            var moves = Target.GetMovesFrom(new BoardCoordinate(2, 3), DefaultBoardSize);
+            //assert
+            Assert.IsTrue(moves.Any(x => x.X == 2 && x.Y == 6));
+        }
     }
 }
