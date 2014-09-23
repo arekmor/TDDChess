@@ -12,13 +12,5 @@ namespace TDDChess
             var validSpoaces = allPossibleSpaces.Where(bc => bc.IsCoordinateValidForBoard(boardSize));
             return validSpoaces;
         }
-
-        private static IEnumerable<BoardCoordinate> GetDiagonalCoordinates(BoardCoordinate startPosition, int distance)
-        {
-            yield return new BoardCoordinate(startPosition.X + distance, startPosition.Y + distance);
-            yield return new BoardCoordinate(startPosition.X + distance, startPosition.Y - distance);
-            yield return new BoardCoordinate(startPosition.X - distance, startPosition.Y - distance);
-            yield return new BoardCoordinate(startPosition.X - distance, startPosition.Y + distance);
-        }
     }
 }
