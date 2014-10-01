@@ -1,2 +1,9 @@
 bin
 obj
+/TDDChess.v12.suo
+/TDDChess.sln.DotSettings.user
+_NCrunch_TDDChess
+/*.ncrunchsolution
+/TDDChess/*.ncrunchproject
+/TDDChess.Tests/*.ncrunchproject
+/*.user
